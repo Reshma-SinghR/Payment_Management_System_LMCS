@@ -1,0 +1,22 @@
+directories:
+  output: release
+  buildResources: build
+appId: com.school.payment
+productName: School Payment System
+files:
+  - filter:
+      - '**/*'
+win:
+  target: nsis
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+extraResources:
+  - from: ../backend/dist/start_backend
+    to: backend
+    filter:
+      - '**/*'
+      - '!**/*.sqlite3'
+  - from: ../frontend/dist
+    to: frontend
+electronVersion: 40.8.2

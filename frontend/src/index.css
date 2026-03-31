@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  /* Premium Palette */
+  --color-navy-900: #0a192f;
+  --color-navy-800: #112240;
+  --color-navy-700: #1d2d50;
+  --color-accent-blue: #007bff;
+  --color-success-green: #10b981;
+  --color-warning-orange: #f59e0b;
+}
+
+@layer base {
+  body {
+    @apply bg-[#f8fbff] text-gray-900 font-sans antialiased;
+  }
+}
+
+.sidebar-gradient {
+  background: linear-gradient(180deg, #0a192f 0%, #112240 100%);
+}
+
+.active-pill {
+  @apply bg-blue-600 text-white shadow-lg shadow-blue-200;
+}
